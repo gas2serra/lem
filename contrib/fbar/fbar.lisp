@@ -89,7 +89,8 @@
 		       (fbar-insert-entry (current-point) f nil newtab )))
 		;; if open, close it
 		(let ((ourtab (fb-tab prop)))
-		  (next-line 1) (line-start (current-point))
+		  (next-line 2)
+		  (line-start (current-point))
 		  (loop 
 		     for tab = (fb-tab (text-property-at (current-point) 'type))
 		     while (> tab ourtab) do
