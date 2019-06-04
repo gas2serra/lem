@@ -42,5 +42,6 @@
                                                 (and (cdr item)
                                                      (funcall (cdr item) item)
                                                 (select-popup-end)))
-                             :print-spec 'car)
+                             :print-spec (lambda (item)
+					   (format nil "~A" (car item))))
   (select-popup-mode t))
